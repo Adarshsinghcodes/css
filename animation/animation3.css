@@ -1,0 +1,85 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgb(30, 24, 24);
+}
+
+.traffic-light {
+    width: 120px;
+    height: 320px;
+    background: #111;
+    border: 5px solid #555;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+.light {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #333;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.red {
+    animation-name: redLight;
+}
+
+.yellow {
+    animation-name: yellowLight;
+}
+
+.green {
+    animation-name: greenLight;
+}
+
+@keyframes redLight {
+    0%, 30% {
+        background: red;
+        box-shadow: 0 0 30px red;
+    }
+    31%, 100% {
+        background: #333;
+        box-shadow: none;
+    }
+}
+
+@keyframes yellowLight {
+    0%, 30% {
+        background: #333;
+        box-shadow: none;
+    }
+    31%, 50% {
+        background: yellow;
+        box-shadow: 0 0 30px yellow;
+    }
+    51%, 100% {
+        background: #333;
+        box-shadow: none;
+    }
+}
+
+@keyframes greenLight {
+    0%, 50% {
+        background: #333;
+        box-shadow: none;
+    }
+    51%, 100% {
+        background: lime;
+        box-shadow: 0 0 30px lime;
+    }
+}

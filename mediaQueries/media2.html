@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #E8CBC0 ;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+
+            /* Desktop: 3 columns */
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .box {
+            height: 250px;
+            border: 2px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* .box img {
+      width: 300px;
+     height: 200px;
+     object-fit: cover;
+     } */
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .box {
+                height: 300px;
+            }
+        }
+
+         @media (max-width: 600px) {
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .box {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+
+             <img src="assets/image1.jpeg" alt="Photo 1">
+           
+        </div>
+
+        <div class="box">
+
+             <img src="assets/image2.jpeg" alt="Photo 2">
+            
+        </div>
+
+        <div class="box">
+            
+            <img src="assets/image3.jpeg" alt="Photo 3">
+            
+        </div>
+
+        <div class="box">
+
+            <img src="assets/image4.jpeg" alt="Photo 4">
+           
+        </div>
+
+        <div class="box">
+
+            <img src="assets/image5.jpeg" alt="Photo 5">
+            
+        </div>
+
+        <div class="box">
+
+            <img src="assets/image6.jpeg" alt="Photo 6">
+            
+        </div>
+
+        <div class="box">
+
+            <img src="assets/image7..jpeg" alt="Photo 7">
+            
+        </div>
+
+        <div class="box">
+
+            <img src="assets/image8.jpeg" alt="Photo 8">
+           
+        </div>
+
+        <div class="box">
+
+            <img src="assets/image9.jpeg" alt="Photo 9">
+          
+        </div>
+
+    </div>
+
+</body>
+</html>
